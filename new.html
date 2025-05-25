@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexcent Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+  .section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+    }
+  /*NAVBAR */
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #f7f8fa;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2d2f33;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .register-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .register-btn {
+    width: 100%;
+  }
+}
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 12px;
+        gap: 12px;
+      }
+
+      .register-btn {
+        margin-top: 12px;
+        width: 100%;
+      }
+    }
+    /* HERO SECTION  */
+     .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 100px;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero h1 {
+      font-size: 48px;
+      color: #333;
+      margin: 0;
+    }
+    .hero h1 span {
+      color: #4CAF50;
+    }
+    .hero p {
+      color: #777;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .hero button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 24px;
+      cursor: pointer;
+    }
+    .hero img {
+      max-width: 400px;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .hero-text {
+        max-width: 100%;
+      }
+      .hero img {
+        margin-top: 30px;
+        max-width: 80%;
+      }
+    }
+    /* OUR CLIENTS SECTION */
+      .clients-section{
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;;
+      color: #444;
+      font-family: Arial, sans-serif;
+      text-align: center;
+       padding: 40px 20px;
+    }
+
+    .clients-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .clients-subtitle {
+      font-size: 14px;
+      color: #999;
+      margin-top: 5px;
+      margin-bottom: 40px;
+    }
+
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 90px;
+    }
+
+    .clients-logos img {
+      height: 40px;
+      opacity: 0.7;
+      transition: transform 0.3s ease;
+    }
+
+    .clients-logos img:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .clients-title {
+        font-size: 22px;
+      }
+
+      .clients-subtitle {
+        font-size: 12px;
+      }
+
+      .clients-logos {
+        gap: 20px;
+      }
+
+      .clients-logos img {
+        height: 30px;
+      }
+    }
+    /* SINGLE SYSTEM SECTION */
+   .community-management {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 ;
+  padding: 20px;
+  color: #2D2D2D;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #6B6B6B;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.audience-cards {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  border: none;
+}
+
+.audience-card {
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.audience-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 15px;
+  background-color: #E9F8F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.audience-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.audience-description {
+  font-size: 13px;
+  color: #6B6B6B;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #f7f8fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    order: 2;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 12px;
+    order: 3;
+  }
+.audience-card
+  .nav-links.active {
+    display: flex;
+  }
+
+  .register-btn {
+    width: 100%;
+    margin-top: 12px;
+    order: 4;
+  }
+
+  .logo {
+    order: 1;
+  }
+}
+
+    /* Pixelgrade section  */
+ .pixel {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      text-align: justify;
+    }
+
+    .Pixelgrade{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .text-section {
+      max-width: 500px;
+    }
+
+    .text-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2d2e32;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      color: #777;
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .Pixelgrade{
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .image-section img {
+        max-width: 200px;
+      }
+
+      .text-section h2 {
+        font-size: 22px;
+      }
+
+      .text-section p {
+        font-size: 14px;
+      }
+    }
+    /* HELPING LOCAL SECTION */
+     .helping {
+      font-family: Arial, sans-serif;
+      background-color: #f7f8fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .heading {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .heading span {
+      color: #34A853;
+    }
+
+    .subtext {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .right {
+      flex:1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stat-item i {
+      font-size: 28px;
+      color: #34A853;
+      min-width: 28px;
+    }
+
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .right {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-left: 30%;
+      }
+
+      .heading {
+        font-size: 24px;
+      }
+
+      .stat-number {
+        font-size: 18px;
+      }
+    }
+    /* DESIGN SECTION */
+     .design {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .left-1 {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .left-1 img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .right-1 {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .right-1 h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .right-1 p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .right-1 button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .design {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .right-1 h1 {
+        font-size: 24px;
+      }
+
+      .right-1 p {
+        font-size: 13px;
+      }
+
+      .right-1 button {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+    /* CUSTOMER SECTION */
+     .customer-section {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .testimonial-container {
+      display: flex;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 1100px;
+      margin: auto;
+      gap: 60px;
+    }
+
+    .company-image {
+      flex-shrink: 0;
+      width: 270px;
+      height: 300px;
+      border-radius: 10px;
+      background: url('./images/66af9e158d309dd1704c49bad560036519bae324.jpg') center/cover no-repeat;
+    }
+
+    .testimonial-content {
+      flex: 1;
+    }
+
+    .testimonial-text {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .customer-name {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .customer-organization {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .brand-logos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .brand-logos img {
+      height: 30px;
+      opacity: 0.8;
+    }
+
+    .all-customers-link {
+      color: #28a745;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .all-customers-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .company-image {
+        width: 280px;
+        height: 220px;
+      }
+
+      .testimonial-content {
+        padding-top: 10px;
+      }
+
+      .brand-logos {
+        justify-content: center;
+      }
+    }
+    /* CARD SECTION */
+    .blog-wrapper  {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .blog-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .blog-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .blog-description {
+      font-size: 18px;
+      color: #555;
+      max-width: 760px;
+      margin: 0 auto 50px auto;
+      line-height: 1.6;
+    }
+
+    .articles-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .article-card {
+      width: 320px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      overflow: visible;
+      position: relative;
+      transition: transform 0.3s ease;
+      padding-bottom: 80px;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .article-card:hover .article-image {
+      transform: scale(1.05);
+    }
+
+    .article-info {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      width: calc(100% - 40px);
+      z-index: 2;
+      text-align: center;
+    }
+
+    .article-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .article-link {
+      color: #28c76f;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .article-link::after {
+      content: " →";
+    }
+
+    @media screen and (max-width: 768px) {
+      .blog-title {
+        font-size: 28px;
+      }
+
+      .blog-description {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .articles-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .article-card {
+        width: 90%;
+      }
+    }
+    /* HERO SECTION */
+     .hero-section {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .demo-button {
+      background: #4ade80;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+/* FOOTER SECTION */
+    .site-footer {
+      background: #1f2937;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:center;
+      padding: 3rem 2rem;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 1rem;
+    }
+
+    .footer-heading {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-logo {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo-icon {
+      color: #4ade80;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 4rem;
+    }
+
+    .social-icons span {
+      width: 32px;
+      height: 32px;
+      background: #374151;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 16px;
+    }
+
+    .newsletter-subscribe {
+      background: #4b5563;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .newsletter-subscribe input {
+      border: none;
+      background: transparent;
+      color: white;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    .newsletter-subscribe span {
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .social-icons{
+        margin-left: 30px;
+      }
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      .brand-logo{
+      margin-left: 20px;
+      margin-bottom:10px;
+}
+      .site-footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer-section {
+        margin: 1rem 0;
+      }
+
+      .newsletter-subscribe {
+        justify-content: center;
+      }
+    }
+</style>
+<body>
+<!-- NAVBAR -->
+<header>
+  <div class="logo">
+    <img src="./images/Icon.png" alt="Nexcent Logo">
+    <span>Nexcent</span>
+  </div>
+
+  <button class="hamburger" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Community</a>
+    <a href="#">Blog</a>
+    <a href="#">Pricing</a>
+  </nav>
+
+  <button class="register-btn">Register Now →</button>
+</header>
+
+<!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Lessons and insights <br><span>from 8 years</span></h1>
+      <p>Where to grow your business as a photographer: site or social media?</p>
+      <button>Register</button>
+    </div>
+    <img src="./images/Illustration.png" alt="Hero Illustration">
+  </section>
+  <!-- OUR CLIENTS SECTION -->
+   <section class="clients-section">
+    <h2 class="clients-title">Our Clients</h2>
+    <p class="clients-subtitle">We have been working with some Fortune 500+ clients</p>
+    <div class="clients-logos">
+      <img src="./images/clint logo1.png" alt="Client 1">
+      <img src="./images/clint logo2.png" alt="Client 2">
+      <img src="./images/clint logo3.png" alt="Client 3">
+      <img src="./images/clint logo3.png" alt="Client 4">
+      <img src="./images/clint logo4.png" alt="Client 5">
+      <img src="./images/clint logo5.png" alt="Client 6">
+      <img src="./images/clint logo6.png" alt="Client 7">
+      <img src="./images/clint logo7.png" alt="Client 8">
+    </div>
+  </section>
+  <!-- SINGLE SYSTEM SECTION -->
+<section class="community-management">
+  <h1 class="section-title">Manage your entire community<br>in a single system</h1>
+  <h2 class="section-subtitle">Who is Nexcent suitable for?</h2>
+
+  <div class="audience-cards">
+    <div class="audience-card">
+      <div class="audience-icon">👥</div>
+      <div class="audience-title">Membership Organisations</div>
+      <div class="audience-description">
+        Our membership management software provides full automation of membership renewals and payments
+      </div>
+    </div>
+
+    <div class="audience-card">
+      <div class="audience-icon">🏛️</div>
+      <div class="audience-title">National Associations</div>
+      <div class="audience-description">
+        Our membership management software provides full automation of membership renewals and payments
+      </div>
+    </div>
+
+    <div class="audience-card">
+      <div class="audience-icon">🚴‍♂️</div>
+      <div class="audience-title">Clubs And Groups</div>
+      <div class="audience-description">
+        Our membership management software provides full automation of membership renewals and payments
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Pixelgrade section -->
+   <section class="pixel">
+     <div class="Pixelgrade">
+    <div class="image-section">
+      <img src="./images/rafiki.png" alt="Pixelgrade Illustration" />
+    </div>
+    <div class="text-section">
+      <h2>The unseen of spending three years at Pixelgrade</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique lacus, Nullam pulvinar elit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
+      </p>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
+  </section>
+  <!-- HELPING LOCAL SECTION -->
+   <section class="helping">
+  <div class="container">
+    <div class="left">
+      <div class="heading">
+        Helping a local <br> <span>business reinvent itself</span>
+      </div>
+      <div class="subtext">
+        We reached here with our hard work and dedication
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="stat-item">
+        <i class="fas fa-users"></i>
+        <div class="stat-info">
+          <div class="stat-number">2,245,341</div>
+          <div class="stat-label">Members</div>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <i class="fas fa-project-diagram"></i>
+        <div class="stat-info">
+          <div class="stat-number">46,328</div>
+          <div class="stat-label">Clubs</div>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <i class="fas fa-calendar-check"></i>
+        <div class="stat-info">
+          <div class="stat-number">828,867</div>
+          <div class="stat-label">Event Bookings</div>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <i class="fas fa-credit-card"></i>
+        <div class="stat-info">
+          <div class="stat-number">1,926,436</div>
+          <div class="stat-label">Payments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- DESING SECTION  -->
+   <section class=" design">
+    <div class="left-1">
+      <img src="./images/pana.png" alt="Illustration" />
+    </div>
+    <div class="right-1">
+      <h1>How to design your site footer like we did</h1>
+      <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
+      <button>Learn More</button>
+    </div>
+</section>
+<!-- CUSTOMER SECTION  -->
+  <section class="customer-section">
+    <div class="testimonial-container">
+      <div class="company-image"></div>
+      <div class="testimonial-content">
+        <p class="testimonial-text">
+          Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+        </p>
+        <p class="customer-name">Tim Smith</p>
+        <p class="customer-organization">British Dragon Boat Racing Association</p>
+        <div class="brand-logos">
+          <img src="./images/clint logo1.png" alt="brand1">
+          <img src="./images/clint logo2.png" alt="brand2">
+          <img src="./images/clint logo3.png" alt="brand3">
+          <img src="./images/clint logo4.png" alt="brand4">
+          <img src="./images/clint logo5.png" alt="brand5">
+          <img src="./images/clint logo6.png" alt="brand6">
+          <a href="#" class="all-customers-link">Meet all customers →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CARD SECTION -->
+    <div class="blog-wrapper">
+    <h1 class="blog-title">Caring is the new marketing</h1>
+    <p class="blog-description">
+      The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lots more.
+    </p>
+
+    <div class="articles-list">
+      <div class="article-card">
+        <img src="./images/card-1.jpg" alt="Card 1" class="article-image" />
+        <div class="article-info">
+          <h3 class="article-title">Creating Streamlined Safeguarding Processes with<br>OneRen</h3>
+          <a href="#" class="article-link">Readmore</a>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <img src="./images/card-2.jpg" alt="Card 2" class="article-image" />
+        <div class="article-info">
+          <h3 class="article-title">What are your safeguarding responsibilities and how can <br> you manage them?</h3>
+          <a href="#" class="article-link">Readmore</a>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <img src="./images/card-3.jpg" alt="Card 3" class="article-image" />
+        <div class="article-info">
+          <h3 class="article-title">Revamping the Membership Model with Triathlon<br>Australia</h3>
+          <a href="#" class="article-link">Readmore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1 class="hero-title">Pellentesque suscipit <br> fringilla libero eu.</h1>
+    <button class="demo-button">Get a Demo →</button>
+  </section>
+  <!--  FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="footer-section">
+      <div class="brand-logo">
+        <img src="./images/Icon.png" alt="footer-icon">
+        Nexcent
+      </div>
+      <p>
+        Copyright © 2020 Landify UI Kit. <br />
+        All rights reserved
+      </p>
+      <div class="social-icons">
+        <span><i class="fab fa-instagram"></i></span>
+        <span><i class="fab fa-dribbble"></i></span>
+        <span><i class="fab fa-twitter"></i></span>
+        <span><i class="fab fa-youtube"></i></span>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4 class="footer-heading">Company</h4>
+      <ul class="footer-links">
+        <li>About us</li>
+        <li>Blog</li>
+        <li>Contact us</li>
+        <li>Pricing</li>
+        <li>Testimonials</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4 class="footer-heading">Support</h4>
+      <ul class="footer-links">
+        <li>Help center</li>
+        <li>Terms of service</li>
+        <li>Legal</li>
+        <li>Privacy policy</li>
+        <li>Status</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4 class="footer-heading">Stay up to date</h4>
+      <div class="newsletter-subscribe">
+        <input type="email" placeholder="Your email address" />
+        <span><i class="fas fa-paper-plane"></i></span>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
